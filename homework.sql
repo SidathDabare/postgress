@@ -8,7 +8,7 @@
 
 4. SELECT customer.customer_id,address.address_id,address FROM customer INNER JOIN address ON customer.customer_id = address.address_id
 
-5. SELECT store.store_id, store.address_id,address FROM store INNER JOIN address ON store.store_id = store.address_id
+5. SELECT * FROM store INNER JOIN address ON store.address_id = address.address_id
 
 6. SELECT * FROM store INNER JOIN staff ON store.manager_staff_id = staff.staff_id
 
@@ -18,4 +18,6 @@
 
 8. SELECT DATE(payment_date) ,SUM(amount) FROM payment GROUP BY DATE(payment_date)
 9. SELECT DATE(payment_date) ,AVG(amount) FROM payment GROUP BY DATE(payment_date)
+--Correct SELECT AVG(amount) FROM payment 
 10.SELECT DATE(payment_date), SUM(amount) FROM payment GROUP BY DATE(payment_date)
+-- Correct SELECT SUM(amount) FROM payment 
